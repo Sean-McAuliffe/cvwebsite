@@ -109,7 +109,7 @@ export default function SkillTab() {
                     return (
                         <button
                             key={d.index}
-                            className={tab == d.index ? "border-b-4 border-b-slate-900 w-1/3" : "border-transparent w-1/3"}
+                            className={tab == d.index ? `border-b-4 border-b-${d.color}-900 w-1/3` : "border-transparent w-1/3"}
                             onClick={() => setTab(d.index)}
                         >
                             {d.label}

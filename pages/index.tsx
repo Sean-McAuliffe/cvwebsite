@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <DashboardPage>
       <DashboardRow>
-        <section className="bg-white dark:bg-gray-900 w-full">
+        <section className="bg-gray-50 dark:bg-gray-900 w-full">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             <div className=" inline-flex justify-between items-center  mb-7 h-52  w-52 rounded-full shadow-md">
               <Image src={me} layout="intrinsic" objectFit='cover' className='rounded-full' />
@@ -20,6 +20,7 @@ const Home: NextPage = () => {
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Sean McAuliffe</h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">I'm a solutions architect with a focus on <b>serverless architectures</b>, <b>enterprise-modernization</b>, and <b>analytics</b>. In addition, I'm a 2x Co-Founder, CTO, & Chief Architect.</p>
             <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+              <a className="bg-slate-600 text-white rounded-lg p-2" href="/files/Sean-McAuliffe.pdf" target={"_blank"} rel="noopener noreferrer">Here's my resume</a>
             </div>
             <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
               <span className="font-semibold text-gray-400 uppercase">CURRENT FOCUSES</span>
@@ -63,8 +64,8 @@ const Home: NextPage = () => {
 
       </DashboardRow>
       <DashboardRow>
-        <div className="bg-white text-center p-3 w-full">
-        <section className="bg-white dark:bg-gray-900 w-full ">
+        <div className="bg-gray-50 text-center p-3 py-4 w-full">
+        <section className=" dark:bg-gray-900 w-full ">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Code Samples</h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">I've linked some code samples below - please feel free to check them out! You may use anything from my repos, but I do ask that you give me credit for them.</p>
         </section>
