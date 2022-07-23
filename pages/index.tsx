@@ -4,7 +4,8 @@ import DashboardPage from '../components/layout/dashboardPage';
 import DashboardRow from '../components/layout/dashboardRow';
 import SkillTab from '../components/skills/skillTab';
 import me from '../public/me.jpg';
-
+import axios from 'axios';
+import RepoCard from 'react-repo-card'
 
 const Home: NextPage = () => {
   let numYears = new Date().getFullYear() - 2014
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
       </DashboardRow>
       <DashboardRow>
         <div className="bg-white w-full h-[fit-content] p-2 flex flex-wrap">
-          <div className="w-1/2 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full p-2 text-center justify-center align-middle">
+          <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full p-2 text-center justify-center align-middle">
             <div className="font-semibold text-slate-700 text-[11rem]">
                 {numYears}
             </div>
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
                 years of experience
             </div>
           </div>
-          <div className="w-1/2 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2  h-full p-2 text-center justify-center align-middle">
+          <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2  h-full p-2 text-center justify-center align-middle">
             <SkillTab/>
           </div>
         </div>
@@ -62,7 +63,10 @@ const Home: NextPage = () => {
 
       </DashboardRow>
       <DashboardRow>
-        stuff here
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full">
+          <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="cvwebsite"/></div>
+          <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="example_data_lake"/></div>
+      </div>
       </DashboardRow>
     </DashboardPage>
   )
