@@ -63,10 +63,16 @@ const Home: NextPage = () => {
 
       </DashboardRow>
       <DashboardRow>
+        <div className="bg-white text-center p-3 w-full">
+        <section className="bg-white dark:bg-gray-900 w-full ">
+            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Code Samples</h1>
+            <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">I've linked some code samples below - please feel free to check them out! You may use anything from my repos, but I do ask that you give me credit for them.</p>
+        </section>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full">
           <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="cvwebsite"/></div>
           <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="example_data_lake"/></div>
       </div>
+        </div>
       </DashboardRow>
     </DashboardPage>
   )

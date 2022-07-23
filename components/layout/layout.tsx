@@ -8,9 +8,9 @@ export default function Layout ({children}){
     return (
         <>
         <div className="w-full h-full flex-col">
-        <div>{Navbar()}</div>
+        {/* <div>{Navbar()}</div> */}
             
-        <div className="bg-gray-50 dark:bg-gray-800">{children}</div>
+        <div className="bg-white dark:bg-gray-800">{children}</div>
         </div>
    
         </>
