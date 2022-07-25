@@ -123,7 +123,7 @@ export default function SkillTab() {
                     {data[tab].skills.map((skill) => {
                         return (
 
-                            <div className="h-20 border-2 border-slate-600 rounded-lg shadow-md p-2 sm:col-span-1 md:col-span-1 lg:col-span-1 text-center align-middle bg-white">
+                            <div key={skill.name} className="h-20 border-2 border-slate-600 rounded-lg shadow-md p-2 sm:col-span-1 md:col-span-1 lg:col-span-1 text-center align-middle bg-white">
                                 <div className={`w-full font-semibold text-lg text-${data[tab].color}-900`}>{skill.name}</div>
                                 <div><span className={`text-${data[tab].color}-900 font-medium`}>{skill.level}</span> / 100 </div>
 
