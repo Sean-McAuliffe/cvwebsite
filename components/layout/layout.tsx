@@ -1,6 +1,6 @@
 
 import type { NextPage } from 'next';
-import Navbar from './navbar'
+
 
 
 export default function Layout ({children}){
