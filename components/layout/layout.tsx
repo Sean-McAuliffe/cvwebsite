@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 
 
-export default function Layout ({children}){
+export default function Layout ({children}:any){
 
     return (
         <>
