@@ -4,8 +4,9 @@ import DashboardPage from '../components/layout/dashboardPage';
 import DashboardRow from '../components/layout/dashboardRow';
 import SkillTab from '../components/skills/skillTab';
 import me from '../public/me.jpg';
-import axios from 'axios';
 import RepoCard from 'react-repo-card'
+import { EmailCard } from '../components/contact cards/email';
+import { PhoneCard } from '../components/contact cards/phone';
 
 const Home: NextPage = () => {
   let numYears = new Date().getFullYear() - 2014
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Sean McAuliffe</h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">I'm a solutions architect with a focus on <b>serverless architectures</b>, <b>enterprise-modernization</b>, and <b>analytics</b>. In addition, I'm a 2x Co-Founder, CTO, & Chief Architect.</p>
             <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              <a className="bg-slate-600 text-white rounded-lg p-2" href="/files/Sean-McAuliffe.pdf" target={"_blank"} rel="noopener noreferrer">Here's my resume</a>
+              {/* <a className="bg-slate-600 text-white rounded-lg p-2 font-semibold" href="/files/Sean-McAuliffe.pdf" target={"_blank"} rel="noopener noreferrer">Here's my resume</a> */}
             </div>
             <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
               <span className="font-semibold text-gray-400 uppercase">CURRENT FOCUSES</span>
@@ -49,30 +50,39 @@ const Home: NextPage = () => {
         <div className="bg-white w-full h-[fit-content] p-2 flex flex-wrap">
           <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 h-full p-2 text-center justify-center align-middle">
             <div className="font-semibold text-slate-700 text-[11rem]">
-                {numYears}
+              {numYears}
             </div>
             <div className="font-semibold text-3xl">
-                years of experience
+              years of experience
             </div>
           </div>
           <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2  h-full p-2 text-center justify-center align-middle">
-            <SkillTab/>
+            <SkillTab />
           </div>
         </div>
-   
-
-
       </DashboardRow>
       <DashboardRow>
         <div className="bg-gray-50 text-center p-3 py-4 w-full">
-        <section className=" dark:bg-gray-900 w-full ">
+          <section className=" dark:bg-gray-900 w-full ">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Code Samples</h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">I've linked some code samples below - please feel free to check them out! You may use anything from my repos, but I do ask that you give me credit for them.</p>
-        </section>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full">
-          <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="cvwebsite"/></div>
-          <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="example_data_lake"/></div>
-      </div>
+          </section>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full">
+            <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="cvwebsite" /></div>
+            <div className="col-span-1"><RepoCard username="Sean-McAuliffe" repository="example_data_lake" /></div>
+          </div>
+        </div>
+      </DashboardRow>
+      <DashboardRow>
+        <div className="bg-white text-center p-3 py-4 w-full">
+          <section className=" dark:bg-gray-900 w-full ">
+            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Contact Me</h1>
+            <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Please feel free to contact me via any of the below methods, as long as it's a business-related inquiry. No one likes spam. </p>
+          </section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 w-full">
+            <EmailCard />
+            <PhoneCard />
+          </div>
         </div>
       </DashboardRow>
     </DashboardPage>
